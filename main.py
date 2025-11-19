@@ -55,14 +55,7 @@ def main():
 
         elif scelta == "3":
             print("\nLISTA DEI GUSTI")
-            if len(gusti) == 0:
-                print("Nessun gusto presente")
-            else:
-                for g in gusti:
-                    if isinstance(g, GustoPremium):
-                        print(g.descrizione_premium())
-                    else:
-                        print(g.descrizione())
+            gusti.lista_gusti()
         
         elif scelta == "4":
             print("\nNUOVO GUSTO VEGANO")
