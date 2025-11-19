@@ -1,5 +1,5 @@
-from .Gusto import Gusto
-from .GustoPremium import GustoPremium
+from .gusto import Gusto
+from .gustopremium import GustoPremium
 from .GustoVegano import GustoVegano
 
 class MenuGelateria():
@@ -20,10 +20,10 @@ class MenuGelateria():
         else:
             return False
         
-    def aggiungi_gusto(self, gusto:gusto):
+    def aggiungi_gusto(self, gusto:Gusto):
         self.__gusti.append(gusto)
     
-    def rimuovi_gusto(self, nome_gusto):
+    def rimuovi_gusto(self, nome_gusto:str):
         for n in self.__gusti:
             if n.get_nome() == nome_gusto:
                 self.__gusti.remove(n)

@@ -1,4 +1,4 @@
-from gusto import Gusto #Importo la classe base Gusto
+from .gusto import Gusto #Importo la classe base Gusto
 
 class GustoPremium(Gusto):#Creo la sottoclasse GustoPremium
     def __init__(self, nome: str, prezzo_base: float, allergeni: list,#Aggiungo i nuvi attributi

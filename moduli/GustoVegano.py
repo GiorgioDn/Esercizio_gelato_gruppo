@@ -1,4 +1,4 @@
-from .Gusto import Gusto
+from .gusto import Gusto
 
 class GustoVegano(Gusto):
     #prende i dati della super classe gusto in aggiunta alla stringa base_vegetale
