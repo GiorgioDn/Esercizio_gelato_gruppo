@@ -12,11 +12,11 @@ class MenuGelateria():
             formatting_list = []
             for n in self.__gusti:
                 if type(n) == GustoPremium:
-                    formatting_list.append([n.get_nome(), n.get_prezzo_base(), n.get_allergeni(), n.get_ingredienti_speciali(), n.get_sovraprezzo()])
+                    print(f"Gelato {n.get_nome()} - {n.get_prezzo_base()} euro - Allergeni: {n.get_allergeni()} - Con la possibilità di aggiungere: {n.get_ingredienti_speciali()} con un sovraprezzo di {n.get_sovraprezzo()} euro")
                 elif type(n) == GustoVegano:
-                    formatting_list.append([n.get_nome(), n.get_prezzo_base(), n.get_allergeni(), n.get_base_vegetale()])
+                    print(f"Gelato {n.get_nome()} - {n.get_prezzo_base()} euro - Allergeni: {n.get_allergeni()} - Con la possibilità di aggiungere: {n.get_base_vegetale()}")
                 else:
-                    formatting_list.append([n.get_nome(), n.get_prezzo_base(), n.get_allergeni()])
+                    print(f"Gelato {n.get_nome()} - {n.get_prezzo_base()} euro - Allergeni: {n.get_allergeni()}")
         else:
             return False
         
