@@ -11,7 +11,7 @@ class MenuGelateria():
             
             for n in self.__gusti:
                 if type(n) == GustoPremium:
-                    print(f"Gelato {n.get_nome()} - {n.get_prezzo_base()} euro - Allergeni: {n.get_allergeni()} - Con la possibilità di aggiungere: {n.get_ingredienti_speciali()} con un sovraprezzo di {n.get_sovraprezzo()} euro")
+                    print(f"Gelato {n.get_nome()} - {n.get_prezzo_base()} euro - Allergeni: {n.get_allergeni()} - Con la possibilità di aggiungere: {n.get_ingredienti_speciali()} con un sovraprezzo di {n.get_sovrapprezzo()} euro")
                 elif type(n) == GustoVegano:
                     print(f"Gelato {n.get_nome()} - {n.get_prezzo_base()} euro - Allergeni: {n.get_allergeni()} - Con la possibilità di aggiungere: {n.get_base_vegetale()}")
                 else:

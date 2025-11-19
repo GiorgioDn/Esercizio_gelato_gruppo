@@ -7,12 +7,10 @@ def menu():
     print("\nMENU GELATERIA ")
     print("1. Aggiungi gusto base")
     print("2. Aggiungi gusto premium")
-    print("3. Mostra tutti i gusti")
-    print("4. Aggiungi gusto vegano")
-    print("5. Aggiungi al menu")
-    print("6. Rimuovi dal menu")
-    print("7. Visualizza il menu")
-    print("8. Esci")
+    print("3. Aggiungi gusto vegano")
+    print("4. Mostra tutti i gusti")
+    print("5. Rimuovi dal menu")
+    print("6. Esci")
     return input("Scegli un'opzione: ")
 
 def chiedi_allergeni():
@@ -52,12 +50,8 @@ def main():
             gusto_p = GustoPremium(nome, prezzo, allergeni, ingredienti, sovrapprezzo)
             gusti.aggiungi_gusto(gusto_p)
             print("Gusto premium aggiunto!")
-
-        elif scelta == "3":
-            print("\nLISTA DEI GUSTI")
-            gusti.lista_gusti()
         
-        elif scelta == "4":
+        elif scelta == "3":
             print("\nNUOVO GUSTO VEGANO")
             nome = input("Nome: ")
             prezzo = float(input("Prezzo base: "))
@@ -67,8 +61,18 @@ def main():
             gusto_p = GustoVegano(nome, prezzo, allergeni, base_vegetale)
             gusti.aggiungi_gusto(gusto_p)
             print("Gusto vegano aggiunto!")
+            
+        elif scelta == "4":
+            print("\nLISTA DEI GUSTI")
+            gusti.lista_gusti()
+            
+        elif scelta == "5":
+            print("\nSCEGLIERE IL NOME DEL GUSTO DA RIMUOVERE")
+            nome = input("Nome: ")
+            gusti.rimuovi_gusto(nome)
+            print(f"Gusto {nome} rimosso!")
 
-        elif scelta == "8":
+        elif scelta == "6":
             print("Arrivederci")
             break
 
